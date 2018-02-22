@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo" />
+
+            <TextView
+                android:id="@+id/nameCafe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:text="Cafe Kostverloren"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TableRow android:layout_marginRight="10dp">
+                <ImageView
+                    android:id="@+id/descrip"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/nameCafe"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/description_foreground" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/descrip"
+                    android:layout_below="@id/nameCafe"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Amazing place to eat handmade Burgers. Also have other items which include salads, sandwiches, desserts, etc."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+            </TableRow>
+
+            <TableRow android:layout_marginRight="10dp">
+                <ImageView
+                    android:id="@+id/position"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/descrip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/position_foreground" />
+
+                <TextView
+                    android:id="@+id/adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/position"
+                    android:layout_below="@id/description"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Tweede Kostverlorenkade 70, 1053 SB Amsterdam"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/phone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/position"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/phone_foreground" />
+
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/phone"
+                    android:layout_below="@id/adress"
+                    android:layout_marginTop="10dp"
+                    android:text="020 820 3161"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColorLink="#0D47A1"
+                    android:autoLink="phone"/>
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/site"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/phone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/website_foreground" />
+
+                <TextView
+                    android:id="@+id/webSite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/site"
+                    android:layout_below="@id/phoneNumber"
+                    android:layout_marginTop="10dp"
+                    android:text="www.cafekostverloren.nl"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColorLink="#0D47A1"
+                    android:autoLink="web"/>
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/hour"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/site"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/hour_foreground" />
+
+                <TextView
+                    android:id="@+id/workTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/site"
+                    android:layout_below="@id/webSite"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Monday - Sunday 11:00 - 23:30"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
